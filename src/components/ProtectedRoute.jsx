@@ -27,7 +27,7 @@ function ProtectedRoute({ children }) {
         dispatch(userActions.setCurrentUser(response.data));
       } catch (error) {
         console.log("Error fetching current user: ", error);
-        message.error("Please login again");
+        message.success("Please login to continue.");
         navigate("/login");
       } finally {
         dispatch(loaderActions.hideLoader());
